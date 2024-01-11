@@ -7,9 +7,11 @@ then
     sudo apt-get -y install nginx
 fi
 # Create the folders
+# Install Nginx if it not already installed
 sudo mkdir -p /data/web_static/releases/test/
 sudo mkdir -p /data/web_static/shared/
 # Create a fake HTML file
+# Install Nginx if it not already installed
 touch /data/web_static/releases/test/index.html
 echo "<html>
   <head>
