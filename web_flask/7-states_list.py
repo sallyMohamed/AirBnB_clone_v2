@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that runs a Flask web application"""
+"""Flask web application"""
 
 from flask import Flask, render_template
 from models import storage
@@ -15,7 +15,7 @@ def teardown_appcontext(exception):
 
 @app.route('/states_list', strict_slashes=False)
 def states():
-    """List all states"""
+    """All states"""
     states = storage.all("State")
     # states_dic = {state['id']: state['name'] for state in states.values()}
     return render_template('7-states_list.html',

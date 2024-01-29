@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Sep  1 14:42:23 2020
-@author: Robinson Montes
+Created on Mon Jan  29 3:24:23 2024
+@author: Sally Mohamed
 """
 from models import storage
 from models.state import State
@@ -12,14 +12,14 @@ app = Flask(__name__)
 
 @app.teardown_appcontext
 def appcontext_teardown(self):
-    """use storage for fetching data from the storage engine
+    """fetching data from the storage engine
     """
     storage.close()
 
 
 @app.route('/cities_by_states', strict_slashes=False)
 def state_info():
-    """Display a HTML page inside the tag BODY"""
+    """tag BODY"""
     return render_template('8-cities_by_states.html',
                            states=storage.all(State))
 
