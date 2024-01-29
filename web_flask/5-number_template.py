@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A script that starts a Flask web application"""
+"""AFlask web application"""
 from flask import Flask
 from flask import render_template
 
@@ -8,19 +8,19 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def display_hello():
-    """Prints hello hbnb"""
+    """P hello hbnb"""
     return "Hello HBNB!"
 
 
 @app.route("/hbnb", strict_slashes=False)
 def desplay_hbnb():
-    """Print hbnb"""
+    """P hbnb"""
     return "HBNB"
 
 
 @app.route("/c/<text>", strict_slashes=False)
 def display_cText(text):
-    """Print C with passed variable"""
+    """P with passed variable"""
     text = text.replace("_", " ")
     return "C %s" % (text)
 
