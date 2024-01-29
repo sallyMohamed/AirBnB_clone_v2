@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A script that starts a Flask web application"""
+"""AFlask web application"""
 from flask import Flask
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def display_hello():
-    """Prints hello hbnb"""
+    """hello hbnb"""
     return "Hello HBNB!"
 
 
@@ -19,7 +19,7 @@ def desplay_hbnb():
 
 @app.route("/c/<text>", strict_slashes=False)
 def display_cText(text):
-    """Print C with passed variable"""
+    """passed variable"""
     text = text.replace("_", " ")
     return "C %s" % (text)
 
@@ -27,7 +27,7 @@ def display_cText(text):
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def display_pythonText(text='is cool'):
-    """ Function called with /python/<text> route """
+    """ with /python/<text> route """
     if text != 'is cool':
         text = text.replace('_', ' ')
     return 'Python %s' % (text)
